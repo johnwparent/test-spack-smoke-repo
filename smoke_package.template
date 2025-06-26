@@ -1,0 +1,40 @@
+# Copyright Spack Project Developers. See COPYRIGHT file for details.
+#
+# SPDX-License-Identifier: (Apache-2.0 OR MIT)
+
+# ----------------------------------------------------------------------------
+# If you submit this package back to Spack as a pull request,
+# please first remove this boilerplate and all FIXME comments.
+#
+# This is a template package file for Spack.  We've put "FIXME"
+# next to all the things you'll want to change. Once you've handled
+# them, you can save this file and test your package like this:
+#
+#     spack install {name}
+#
+# You can edit this file again by typing:
+#
+#     spack edit {name}
+#
+# See the Spack documentation for more information on packaging.
+# ----------------------------------------------------------------------------
+import os
+{package_class_import}
+from spack.package import *
+
+
+class {class_name}({base_class_name}):
+    """FIXME: Put a proper description of your test package here."""
+
+    homepage = "https://spack.io"
+    url = os.path.join(os.path.dirname(__file__), "{class_name}-{version}.tgz")
+
+
+    maintainers("spack")
+
+    # FIXME: Add the SPDX identifier of the project's license below.
+    # See https://spdx.org/licenses/ for a list. Upon manually verifying
+    # the license, set checked_by to your Github username.
+    license("MIT")
+
+    version("{version}", sha256={hash})
