@@ -1,4 +1,4 @@
 # smoketests
 repo_index:
   paths:
-  - smoke_tests/spack_repo/packages
+  - smoke_tests/spack_repo
