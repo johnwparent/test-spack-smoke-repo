@@ -3,7 +3,10 @@
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 import os
-{package_class_import}
+
+from urllib.request import pathname2url
+
+from spack_repo.builtin.build_systems.cmake import CMakePackage
 from spack.package import *
 
 
@@ -16,14 +19,16 @@ class Smoke1(CMakePackage):
     """
 
     homepage = "https://spack.io"
-    url = os.path.join(os.path.dirname(__file__), "smoke1-0.1.tgz")
-
+    url = "file:" + pathname2url(os.path.join(os.path.dirname(__file__), "smoke1-0.1.tgz"))
 
     maintainers("spack")
 
     license("MIT")
 
     version("0.1", sha256="275a558bc1ada9adea8a3c2425d3e14d2f5fbe92e13bedf952c9de578cc13f1b")
+
+    depends_on("c", type="build")
+    depends_on("cxx", type="build")
 
     def test_basic(self):
         exe_name = join_path(self.prefix.bin, "smoke1")
