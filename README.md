@@ -26,21 +26,28 @@ Installing - Installing the package from the build tree
 
 Testing - Validates the software built and installed actually runs
 
-
 Each of these higher level tasks exercises many more atomic sections of Spack that are well covered by our unit tests.
 The purpose served by this test is to validate the integration and compatibility of each of these more atomic components (hence, integration testing :) )
 
 ### Roadmap for future Tests
 
 Build systems - Expand beyond CMake
+
 Platforms - Platform specific tests
+
 Architectures - Arch specific tests
+
 Urls - different types of URLs to fetch from
+
 Configs - different config setups
+
 Repos - More complex repo setups
+
 Packages - Packages doing more complex things, packages that depend on each other, virtuals, etc
+
 Libs and executables - test all types
-Modueles - test usage of modules
+
+Modules - test usage of modules
 
 #### MPI
 
