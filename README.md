@@ -13,12 +13,19 @@ hours for Gitlab to complete.
 ## Currently Tested Behavior
 
 Compiler and Package detection
+
 Repo - Adding a repo beyond builtin and utilizing packages from it
+
 Fetching - Fetching a package's source from a local file url
+
 Staging - Successfully staging a packages source
+
 Building - Executing a build system and driving the build of that system
+
 Installing - Installing the package from the build tree
+
 Testing - Validates the software built and installed actually runs
+
 
 Each of these higher level tasks exercises many more atomic sections of Spack that are well covered by our unit tests.
 The purpose served by this test is to validate the integration and compatibility of each of these more atomic components (hence, integration testing :) )
